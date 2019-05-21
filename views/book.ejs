@@ -1,0 +1,34 @@
+<% include partials/header.ejs %>
+<form action="form" method="POST" class="save-form">
+    <div class="form-header">
+        <div class="bar">
+            <div class="app-name">WLIBRARY</div>
+            <div class="app-controls">
+                <span class="list-books-route">&leftrightarrows;</span>
+                <span class="update-book-route"><a href="/">&capcup;</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="show-book">
+        <div class="book-cover">
+            <div class="cover"></div>
+        </div>
+        <div class="book-descriptions">
+            <div class="book-infos">
+                <div class="book-description">Title :</div>
+                <div><%= book.title %></div>
+            </div>
+            <div class="book-infos">
+                <div class="book-description">Author :</div>
+                <div><%= book.author %></div>
+            </div>
+            <div class="book-infos">
+                <div class="book-description">Publisher :</div>
+                <div><%= book.publisher %></div>
+            </div>
+        </div>
+    </div>
+    
+    
+</form>
+<% include partials/footer.ejs %>

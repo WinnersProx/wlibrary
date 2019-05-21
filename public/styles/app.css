@@ -1,0 +1,137 @@
+:root{
+    --dark               : rgb(33, 37, 39);
+    --primary-choco      : rgba(149, 120, 183, .9);
+    --primary            : rgb(58, 200, 255);
+    --light              : #ffff;
+}
+body{
+    background: rgb(37, 45, 49);
+    padding: 1em auto;
+    font-family: sans-serif;
+}
+a{
+    color : var(--light) !important;
+}
+.save-form{
+    position: relative;
+    width: 500px;
+    height: auto;
+    background: #212527;
+    /* box-shadow: 0 0 7px rgba(0,0,0,.3); */
+    margin: calc(50vh - (300px / 2)) auto;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.save-form label{
+    color: var(--light);
+    font-family: sans-serif;
+    width: 100%;
+}
+.save-form .form-body{
+    padding: 1em;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.save-form .form-body::-webkit-scrollbar {
+    width: 5px;
+    background: #212527;
+}
+.save-form .form-body::-webkit-scrollbar-thumb {
+    background: rgba(176, 190, 197, 0.3);
+    border-radius: 5px;
+}
+.save-form input{
+    display: block;
+    box-sizing: border-box;
+    padding: .6em .8em;
+    margin-bottom: .6em;
+    width: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: rgb(206, 201, 201);
+    font-family: inherit;
+    font-size: .95em;
+    border-bottom: 1px solid var(--primary-choco)
+}
+.form-header{
+    padding: 15px;
+    color: var(--light);
+    border-bottom: 1px solid rgba(137, 112, 169, 0.2);
+}
+.form-header .bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.form-header .app-name{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    color : rgba(149, 120, 188, 1);
+}
+.form-header .app-controls{
+    font-size: 1.5em;
+}
+.form-header .app-controls span{
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0 .4em;
+}
+.save-input{
+    width: 100%;
+}
+.save-form button{
+    border: none;
+    outline: none;
+    background: var(--primary-choco);
+    color: white;
+    padding: .8em 2em;
+    font-family: sans-serif;
+    font-size: .8em;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+.books-header, .book{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    line-height: 50px;
+}
+.books-header{
+    font-weight: bold;
+}
+.book{
+    color: #a79898;
+    cursor: pointer;
+    font-family: unset;
+    border-bottom: 1px solid rgba(0,0,0,.3);
+}
+/*  show book infos */
+.show-book{
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+    justify-content: space-between;
+    color: var(--light);
+}
+.book-cover .cover{
+    height: 150px;
+    width: 150px;
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+.book-infos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.book-infos .book-description{
+    /* flex-grow: 1; */
+    padding-right: .5em;
+    font-weight: bold;
+}
+.book-infos .infos{
+    padding-left: .8em;
+}

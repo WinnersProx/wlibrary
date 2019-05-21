@@ -1,0 +1,32 @@
+<% include partials/header.ejs %>
+<form action="form" method="POST" class="save-form">
+    <div class="form-header">
+        <div class="bar">
+            <div class="app-name">WLIBRARY</div>
+            <div class="app-controls">
+                <span class="list-books-route">&leftrightarrows;</span>
+                <span class="add-book-route">&plus;</span>
+            </div>
+        </div>
+        <div class="books-header bar">
+            <div>Author</div>
+            <div>Title</div>
+            <div>Publisher</div>
+        </div>
+    </div>
+    <div class="form-body">
+        
+        <div class="book-lists">
+            <% books.forEach((book, key) => {%>
+                <div class="book" title="Click to view <%= `${book.title} by  ${book.author}` %>" data-book-key="<%= key %>">
+                    <div class="author"><%= book.author %></div>
+                    <div class="title"><%= book.title %></div>
+                    <div class="publisher"><%= book.publisher %></div>
+                </div>
+            <%})%>
+        </div>
+    </div>
+    
+    
+</form>
+<% include partials/footer.ejs %>
